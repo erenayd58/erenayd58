@@ -74,8 +74,7 @@ Ek olarak Anadolu Üniversitesi – Bilgisayar Programcılığı (donduruldu)
 
 ### 📈 GitHub İstatistikleri
 
-![Eren'in GitHub istatistikleri](https://github-readme-stats.vercel.app/api?username=erenayd58&show_icons=true&theme=swift&include_all_commits=true)
-
+[![GitHub Streak](https://streak-stats.demolab.com?user=erenayd58&theme=dark&locale=tr)](https://git.io/streak-stats)
 ---
 
 ### 📫 Bana Ulaşın
