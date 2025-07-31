@@ -1,4 +1,4 @@
-### Merhaba! 👋 Ben Eren Aydemir
+### Merhaba! Ben Eren Aydemir
 
 🎓 Yıldız Teknik Üniversitesi Mekatronik Mühendisliği öğrencisiyim.  
 🚀 Gömülü sistemler, robotik, yapay zekâ ve mobil/IoT tabanlı ürünler geliştirmeye tutkuyla bağlıyım.
