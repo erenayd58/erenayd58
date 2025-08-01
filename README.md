@@ -50,7 +50,7 @@
 
 ---
 
-### ✍️ İçeriklerim
+###  İçeriklerim
 
 - [Medium’da yazıyorum](https://medium.com/@erenayd.7): NLP, Yapay Zekâ, robotik ve mühendislik üzerine sade anlatımlar.  
 - GPT, transformers, veri analizi ve sinyal işleme gibi konuları ele alıyorum.
