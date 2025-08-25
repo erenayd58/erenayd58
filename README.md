@@ -84,5 +84,4 @@ Ek olarak Anadolu Üniversitesi – Bilgisayar Programcılığı (donduruldu)
 
 ---
 
-> “Kod, devre ve fikir bir araya geldiğinde ortaya mühendislik çıkar.” ⚙️🔥
 
