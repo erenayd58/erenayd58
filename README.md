@@ -1,87 +1,56 @@
-### Merhaba! Ben Eren Aydemir
+Eren Aydemir
+AI Engineering — LLM Systems, RAG & Agentic AI
 
-🎓 Yıldız Teknik Üniversitesi Mekatronik Mühendisliği öğrencisiyim.  
-🚀 Gömülü sistemler, robotik, yapay zekâ ve mobil/IoT tabanlı ürünler geliştirmeye tutkuyla bağlıyım.
+I build LLM-powered systems where the model is one component inside a pipeline that can be inspected: deterministic control around model calls, explicit provenance, validated structured outputs, and results reported as they actually ran.
 
----
+Final-year Mechatronics Engineering student at Yıldız Technical University, focused on applied AI engineering. Open to part-time and long-term opportunities in LLM systems, agentic AI, RAG and applied ML.
 
-### 💡 Hakkımda Kısaca
+📫 erenayd58@gmail.com · LinkedIn · Medium
 
-- Gerçek dünya problemlerine mühendislik çözümleri üretmeyi seviyorum.
-- Donanım ve yazılımı birleştirerek özgün sistemler geliştiriyorum.
-- Şu anda otonom araçlar, yapay zekâ tabanlı sistemler ve IoT projeleri üzerinde çalışıyorum.
-- Takım liderliği, ürün geliştirme ve proje yönetiminde aktif rol alıyorum.
+Focus
+LLM systems & RAG — chunking strategies, hybrid retrieval (dense + BM25), citation-grounded answering
+Agentic AI — tool-using pipelines with deterministic logic around the model
+Evaluation & reliability — structured outputs, schema validation, field-level provenance, failure escalation
+Applied ML & intelligent industrial systems — time-series modeling, federated learning, explainable AI, edge inference
+Tech
+Languages	Python · TypeScript · C/C++ · SQL · Dart
+LLM & RAG	OpenAI-compatible APIs (OpenAI, OpenRouter, Azure), Ollama, structured outputs, pgvector, BM25, RRF fusion, cross-encoder reranking, tiktoken
+Backend & Data	FastAPI, Pydantic, Flask, Docker, PostgreSQL 16 + pgvector, Supabase, ChromaDB, FAISS, NumPy
+ML / DL	TensorFlow/Keras, scikit-learn, SHAP, LIME, Grad-CAM, TFLite, OpenCV
+Other	Next.js / React, Linux, Git, pytest, Playwright, Ruff
+Featured Projects
+Chunk-Viewer — RAG system for comparing chunking strategies
+A PDF is parsed once into canonical units, then partitioned by four interchangeable methods under one identical token budget — Markdown (baseline), Standard (structure-aware), Hybrid (embedding-based) and Deep Analysis (LLM proposer → deterministic quality selector → dual-pass validator) — so the only variable is where the boundaries fall. Retrieval fuses pgvector dense search with a deterministic Turkish BM25 via RRF, and answers cite their sources inline ([S1], [S2]). The Viewer shows each method's boundaries on the same text; a new chunking method registers as a single plugin file plus a test.
 
----
+Python FastAPI PostgreSQL 16 + pgvector Next.js / React Docker — provider-agnostic (OpenAI-compatible endpoints or local Ollama)
 
-### 🔧 Teknik Yetenekler
+areal.ai — Auditable document-AI pipeline (NLP/LLM take-home assignment)
+An offline-first pipeline turning mortgage PDFs into loan-level results with source evidence preserved end to end. LLMs are restricted to interpreting unstructured content; deterministic code owns page identity, grouping, normalization, conflict rules and human-review escalation. Strict JSON parsing with Pydantic semantic validation, field-level provenance and audit trails, and a configurable reliability policy with deterministic conflict escalation. The optional OpenAI adapter uses Structured Outputs and sends store=False; tests run with network access blocked. The evaluation section reports the run as it happened, including the document that failed provenance validation.
 
-**Programlama:** Python, C/C++, Embedded C, Dart (Flutter)  
-**Yapay Zekâ & Veri:** Scikit-learn, OpenCV, Tesseract, MATLAB (öğrenme aşamasında)  
-**Robotik:** ROS1/2, RViz, Gazebo, TF, URDF, sensör füzyonu  
-**Gömülü Sistemler:** ESP32, MQTT, FreeRTOS, STM32, Jetson Nano  
-**Arayüz & Uygulama:** Flutter, Firebase, REST API, PyQt5  
-**Tasarım & Donanım:** SolidWorks, KiCad, LTSpice, AutoCAD, Linux (Ubuntu)
+Python Pydantic PyMuPDF OpenAI Structured Outputs pytest
 
----
+pq-fedpredict — Federated + explainable predictive maintenance for CNC machines
+A CNN-BiLSTM model with temporal attention and three heads — subsystem (6-class), fault (24-class taxonomy across spindle, tool, axis, coolant, hydraulic and power) and RUL regression — trained both centrally and federated (FedAvg / FedProx) across simulated clients with non-IID data. Includes a synthetic data generator for the fault taxonomy, SHAP / LIME / Grad-CAM explainability, TFLite INT8 export for Raspberry Pi 5 edge inference, a Dilithium signature proof-of-concept for model-integrity verification, and Docker + MLflow experiment infrastructure.
 
-### 🚀 Projelerim ve Yarışmalar
+Python TensorFlow Federated Learning SHAP / LIME / Grad-CAM TFLite Docker MLflow
 
-#### 🛻 TEKNOFEST – İnsansız Kara Aracı (Yazılım Takım Lideri)
-- ROS üzerinde A* rota planlama algoritması geliştirdim.
-- RPLIDAR, IMU ve encoder verilerini birleştirerek otonom sürüş senaryoları oluşturdum.
-- PyQt5 ve web arayüzüyle gerçek zamanlı izleme ve kontrol sağladım.
+pusula — Multi-tenant study-tracking and coaching platform
+A platform for 8th-grade LGS students with four roles (institution owner, coach, student, parent). Authorization is enforced in PostgreSQL through row-level security and tested with pgTAP; a custom access-token hook injects the role claim into the JWT for proxy-level routing. Playwright end-to-end tests run against a production build rather than the dev server.
 
-#### 📦 Smart Cargo Box – TÜBİTAK BIGG Programı
-- ESP32 + MQTT ile uzaktan kontrol edilebilen kargo kutusu geliştirdim.
-- Flutter ile mobil uygulama entegrasyonu sağladım.
+Next.js TypeScript Supabase / PostgreSQL RLS + pgTAP Playwright
 
-#### ❤️ AI Destekli Kalp Analiz Sistemi – TEKNOFEST
-- ESP32 üzerinden ECG verisi toplayarak mobil uygulamayla gerçek zamanlı analiz yaptım.
-- Anomali tespiti ve sinyal işleme üzerine çalıştım.
+Background: Robotics & Embedded Systems
+Hardware-in-the-loop work that preceded my focus on AI systems — useful context for industrial and edge AI.
 
-#### 🧠 YTÜ – BEKO Datathon 2025 (1.lik)
-- Gerçek sensör verisiyle kestirimci bakım modeli geliştirdik.
-- Temizleme, modelleme ve doğrulama süreçlerini yönettim.
+TEKNOFEST — Autonomous Ground Vehicle (Software Team Lead): A* path planning on ROS; fused RPLIDAR, IMU and encoder data for autonomous driving scenarios; real-time monitoring via PyQt5 and a web interface.
+YTÜ – BEKO Datathon 2025 — 1st place: predictive maintenance model on real sensor data (cleaning, modeling, validation).
+Smart Cargo Box — TÜBİTAK BIGG programme: ESP32 + MQTT remote-controlled cargo box with a Flutter mobile app.
+AI-assisted Heart Analysis — TEKNOFEST: ECG acquisition over ESP32 with real-time mobile analysis; signal processing and anomaly detection.
+ROS 1/2 Gazebo / RViz / URDF ESP32 STM32 FreeRTOS MQTT Jetson Nano Flutter
 
-#### 🤖 Mayın Tespit Robotu
-- IR sensörlerle engel algılayan, otonom ilerleyen robot geliştirdim.
-- Gömülü C++ ile motor kontrol algoritmaları yazdım.
+Education & Writing
+Yıldız Technical University — B.Sc. Mechatronics Engineering (ongoing) · Anadolu University — Computer Programming (on hold)
 
----
+Certificates: Coderspace AI & Data Science Summer School · Miuul Python for Data Science · Udemy MATLAB Masterclass (in progress)
 
-###  İçeriklerim
-
-- [Medium’da yazıyorum](https://medium.com/@erenayd.7): NLP, Yapay Zekâ, robotik ve mühendislik üzerine sade anlatımlar.  
-- GPT, transformers, veri analizi ve sinyal işleme gibi konuları ele alıyorum.
-
----
-
-### 🎓 Eğitim
-
-**Yıldız Teknik Üniversitesi – Mekatronik Mühendisliği (Devam ediyor)**  
-Ek olarak Anadolu Üniversitesi – Bilgisayar Programcılığı (donduruldu)
-
----
-
-### 📜 Sertifikalar
-
-- Coderspace – Yapay Zekâ & Veri Bilimi Yaz Okulu  
-- Python for Data Science – Miuul  
-- MATLAB Masterclass – Udemy (devam ediyor)
-
----
-
-### 📈 GitHub İstatistikleri
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=erenayd58&theme=dark&locale=tr)](https://git.io/streak-stats)
----
-
-### 📫 Bana Ulaşın
-
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erenayd58)  
-📬 erenayd58@gmail.com
-
----
-
-
+I write on Medium about NLP, LLMs, transformers and data analysis — plain-language explanations of things I've had to work through myself.
